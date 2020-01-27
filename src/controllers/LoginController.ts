@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { Get, Controller, Use, bodyValidator, Post } from './decorator'
+import { Get, Controller, bodyValidator, Post } from './decorator'
 
 interface RequestWithBody extends Request {
   body: { [key: string]: string | undefined }
