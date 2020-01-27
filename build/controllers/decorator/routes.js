@@ -4,7 +4,7 @@ require("reflect-metadata");
 var types_1 = require("./types");
 function routeBinder(method) {
     return function (path) {
-        return function (target, key) {
+        return function (target, key, desc) {
             Reflect.defineMetadata(types_1.MetaDataKeys.PATH, path, target, key);
             Reflect.defineMetadata(types_1.MetaDataKeys.METHOD, method, target, key);
         };
